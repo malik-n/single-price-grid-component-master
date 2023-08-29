@@ -1,5 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
   background-color: hsl(204, 43%, 93%);
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+}
+
+/* Creating my CSS Variables */
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
   margin: 0px;
   padding: 50px 0px;
 }
@@ -9,6 +30,14 @@ body {
   background-color: hsl(204, 43%, 93%);
   font-family: Karla, sans-serif, "Times New Roman", Times, serif;
   font-size: 0.9rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* min-height: 100dvh; */
   display: flex;
   flex-direction: column;
@@ -21,6 +50,13 @@ body {
 
 .join {
   background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-heading {
+    margin-top: 1.5rem;
   width: 14rem;
   padding: 1.2rem;
   border-radius: 5px 5px 0px 0px;
@@ -29,7 +65,25 @@ body {
 .join > h3 {
   color: hsl(179, 62%, 43%);
 }
+.sub-heading > h4 {
+  color: hsl(71, 73%, 54%);
+}
 
+.sub-heading > p {
+  color: hsl(218, 22%, 67%);
+  margin-top: 0.4rem;
+}
+
+/* Row span 2  */
+
+.row-span-2 {
+  
+}
+
+/* Row span ends */
+
+
+/* Sub section starts */
 .join > h4 {
   color: hsl(71, 73%, 54%);
 }
@@ -43,6 +97,41 @@ body {
   background-color: hsl(179, 62%, 43%);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  width: inherit;
+  color: white;
+  line-height: initial;
+}
+
+
+.sub .pricing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub .pricing h1 {
+    font-size: 38px;
+}
+
+.row-span-2 .sub a {
+  text-decoration: none;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  width: inherit;
+  padding: 18px 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-top: 10px;
+}
+
+/* Sub section ends */
+
+/* Why section start */
   width: 14rem;
   padding: 1.2rem;
   color: white;
@@ -72,6 +161,10 @@ body {
   background-color: hsl(179, 57%, 46%);
   display: flex;
   flex-direction: column;
+  color: white;
+  padding: 2rem;
+  border: none;
+  line-height: 0.6rem;
   width: 14rem;
   border-radius: 0px 0px 5px 5px;
   color: white;
@@ -87,6 +180,46 @@ body {
   opacity: 0.8;
 }
 
+/* Why section ends here */
+
+/* Tablet viewport */
+@media  (min-width: 500px) {
+    body {
+        padding-block: 1.5rem;
+        height: 100%;
+    }
+    .container {
+        max-width: 600px;
+        padding-inline: 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        padding-block: 0;
+    }
+
+    .join {
+        width: initial;
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+
+    .row-span-2 {
+        display: flex;
+        width: 100%;
+        padding: 0;
+    }
+
+    .row-span-2 .sub {
+        flex-basis: 50%;
+        padding-inline: 2rem;
+        padding-block: 4rem;
+    }
+
+    .row-span-2 .why {
+        flex-basis: 50%;
+        border-radius: 0px;
+        padding-inline: 2rem;
+        padding-block: 4rem;
+    }
 /* MEDIA QUERIES (FOR RESPONSIVE-NESS) */
 
 @media (min-width: 376px) and (max-width: 1440px) {
@@ -105,4 +238,12 @@ body {
   .sub {
     border-bottom-left-radius: 5px;
   }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 0;
+        height: 100%;
+        padding-block: 2rem;
+    }
 }
