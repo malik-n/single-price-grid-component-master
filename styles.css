@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -33,17 +33,9 @@ body {
   width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
-  border-radius: 0.5rem;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* min-height: 100dvh; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* margin: 50px 0px; */
 }
 
 /* SECTION 1 */
@@ -56,10 +48,8 @@ body {
 }
 
 .sub-heading {
-    margin-top: 1.5rem;
-  width: 14rem;
-  padding: 1.2rem;
-  border-radius: 5px 5px 0px 0px;
+  margin-top: 1.5rem;
+  width: 100%;
 }
 
 .join > h3 {
@@ -77,11 +67,9 @@ body {
 /* Row span 2  */
 
 .row-span-2 {
-  
 }
 
 /* Row span ends */
-
 
 /* Sub section starts */
 .join > h4 {
@@ -105,15 +93,14 @@ body {
   line-height: initial;
 }
 
-
 .sub .pricing {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .sub .pricing h1 {
-    font-size: 38px;
+  font-size: 38px;
 }
 
 .row-span-2 .sub a {
@@ -130,13 +117,6 @@ body {
 }
 
 /* Sub section ends */
-
-/* Why section start */
-  width: 14rem;
-  padding: 1.2rem;
-  color: white;
-  line-height: 0.5rem;
-}
 
 .price {
   display: flex;
@@ -164,12 +144,9 @@ body {
   color: white;
   padding: 2rem;
   border: none;
-  line-height: 0.6rem;
-  width: 14rem;
-  border-radius: 0px 0px 5px 5px;
-  color: white;
-  padding: 1.2rem;
-  border: none;
+  line-height: inherit;
+  width: 100%;
+  padding: 2rem;
   text-align: left;
 }
 
@@ -183,67 +160,63 @@ body {
 /* Why section ends here */
 
 /* Tablet viewport */
-@media  (min-width: 500px) {
-    body {
-        padding-block: 1.5rem;
-        height: 100%;
-    }
-    .container {
-        max-width: 600px;
-        padding-inline: 0;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        padding-block: 0;
-    }
-
-    .join {
-        width: initial;
-        padding-inline: 2rem;
-        padding-block: 3rem;
-    }
-
-    .row-span-2 {
-        display: flex;
-        width: 100%;
-        padding: 0;
-    }
-
-    .row-span-2 .sub {
-        flex-basis: 50%;
-        padding-inline: 2rem;
-        padding-block: 4rem;
-    }
-
-    .row-span-2 .why {
-        flex-basis: 50%;
-        border-radius: 0px;
-        padding-inline: 2rem;
-        padding-block: 4rem;
-    }
-/* MEDIA QUERIES (FOR RESPONSIVE-NESS) */
-
-@media (min-width: 376px) and (max-width: 1440px) {
-  .main {
-    display: flex;
+@media (min-width: 500px) {
+  body {
+    padding-block: 1.5rem;
+    height: 100%;
+  }
+  .container {
+    max-width: 600px;
+    padding-inline: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding-block: 0;
   }
 
   .join {
-    width: 30.5rem;
+    width: initial;
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    width: inherit;
   }
 
-  .sub-container {
+  .row-span-2 {
     display: flex;
+    width: 100%;
+    height: inherit;
+    padding: 0;
   }
 
-  .sub {
-    border-bottom-left-radius: 5px;
+  .row-span-2 .sub {
+    flex-basis: 50%;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+  }
+
+  .row-span-2 .why {
+    flex-basis: 50%;
+    border-radius: 0px;
+    padding-inline: 2rem;
+    padding-block: 4rem;
   }
 }
 
 @media (min-width: 768px) {
-    body {
-        padding: 0;
-        height: 100%;
-        padding-block: 2rem;
-    }
+  body {
+    padding: 0;
+    height: 100%;
+    padding-block: 2rem;
+  }
 }
+
+@media (min-width: 1024px) {
+    body {
+      padding: 0;
+      height: 100vh;
+      padding-block: 0;
+    }
+
+    .row-span-2 {
+        height: inherit;
+    }
+  }
